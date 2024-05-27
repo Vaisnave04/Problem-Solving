@@ -1,0 +1,38 @@
+/*Using Brute Force*/
+#include<stdio.h>
+int main(){
+    int num1=1,num2=5;
+    int sum=0;
+    for(int i=num1;i<=num2;i++){
+        sum+=i;
+        
+    }
+    printf("The sum of n numbers is %d",sum);
+}
+/*Using Formula*/
+#include<stdio.h>
+int main(){
+    int num1,num2;
+    printf("Enter number 1: ");
+    scanf("%d",&num1);
+    printf("Enter number 2: ");
+    scanf("%d",&num2);
+    int sum=num2*(num2+1)/2-num1*(num1+1)/2+num1;
+    printf("The sum of n numbers in the range is : %d",sum);
+    
+}
+/*Using Function*/
+#include<stdio.h>
+int rangesum(int sum,int num1,int num2){
+    if(num2<num1){
+        return sum;
+    }
+    return num2+rangesum(sum,num1,num2-1);
+    
+}
+int main(){
+    int num1=1,num2=5;
+    int sum=0;
+    printf("The sum of numbers in the range is %d",rangesum(sum,num1,num2));
+    
+}
