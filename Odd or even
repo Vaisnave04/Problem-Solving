@@ -1,0 +1,33 @@
+/*Using Modulo */
+#include<stdio.h>
+int main(){
+    int num;
+    printf("Enter a number:");
+    scanf("%d",&num);
+    if(num%2==0){
+        printf("Even Number");
+    }
+    else{
+        printf("Odd number");
+    }
+}
+/*Using Ternary Operator */
+#include<stdio.h>
+int main(){
+    int num;
+    printf("Enter a number:");
+    scanf("%d",&num);
+    (num%2==0)?printf("Even number"):printf("Odd number");
+}
+/*Bitwise Operator*/
+#include<stdio.h>
+int iseven(int num){
+    return (num&1);
+    
+}
+int main(){
+    int num;
+    printf("Enter a number:");
+    scanf("%d",&num);
+    iseven(num)?printf("Odd"):printf("Even");
+}
