@@ -21,7 +21,7 @@ int main(){
     printf("The sum of n numbers in the range is : %d",sum);
     
 }
-/*Using Function*/
+/*Using Function- Recursion*/
 #include<stdio.h>
 int rangesum(int sum,int num1,int num2){
     if(num2<num1){
