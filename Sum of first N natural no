@@ -1,0 +1,44 @@
+/*Using For Loop*/
+#include<stdio.h>
+int main(){
+    int num;
+    int sum=0;
+    printf("Enter a number: ");
+    scanf("%d",&num);
+    for(int i=0;i<=num;i++){
+        sum+=i;
+        
+    }
+    printf("The sum of n number is %d",&sum);
+    
+}
+/*Using Formula*/
+#include<stdio.h>
+int main(){
+    int num;
+    printf("Enter a number: ");
+    scanf("%d",&num);
+    int sum=num*(num+1)/2;
+
+    printf("The sum of n number is %d",sum);
+    
+}
+
+/*Using Function*/
+#include<stdio.h>
+int sumf(int num,int sum){
+    if(num==0){
+        return sum;
+    }
+    return num+sumf(num-1,sum);
+     
+    
+}
+int main(){
+    int num;
+    int sum=0;
+    printf("Enter a number :");
+    scanf("%d",&num);
+    printf("The sum of n number is:");
+    printf("%d",sumf(num,sum));
+}
