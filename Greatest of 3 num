@@ -1,0 +1,26 @@
+/*Using if-else */
+
+#include<stdio.h>
+int main(){
+    int num1=13,num2=14,num3=15;
+    if(num1>num2 && num1>num3){
+        printf("%d is greater",num1);
+    }
+    else if(num2>num1 && num2>num3){
+        printf("%d is greater",num2);
+    }
+    else{
+        printf("%d is greater",num3);
+    }
+}
+/*Using ternary Operator*/
+
+
+#include<stdio.h>
+int main(){
+    int num1=112,num2=13,num3=1;
+    int temp,res;
+    temp=(num1>num2)?num1:num2;
+    res=(temp>num3)?temp:num3;
+    printf("%d is greatest",res);
+}
