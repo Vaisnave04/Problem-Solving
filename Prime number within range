@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<math.h>
+int ischech(int num){
+    if(num<2){
+        printf("%d is not a prime number",num);
+    }
+    else{
+        for(int i=2;i<=sqrt(num);i++){
+            if(num%i==0){
+                return 0;
+            }
+            else{
+                return 1;
+            }
+        }
+    }
+}
+int main(){
+    int a=10,b=20;
+    for(int i=a;i<=b;i++){
+        if(ischech(i)){
+            printf("%d is a prime number\n",i);
+        }
+    }
+}
