@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main(){
+    int num=1234,rev=0,rem;
+    while(num!=0){
+        rem=num%10;
+        rev=rev*10+rem;
+        num=num/10;
+    }
+    printf("The reverse of a number is %d",rev);
+}
+
+/*Using Function*/
+#include<stdio.h>
+int rever(int num,int rev){
+    if(num==0){
+        return rev;
+    }
+    int rem=num%10;
+    rev=rev*10+rem;
+    return rever(num/10,rev);
+   
+}
+int main(){
+    int num=1234,rev=0;
+    printf("The reverse of the num %d",rever(num,rev));
+}
