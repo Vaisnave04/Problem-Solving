@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<math.h>
+int length(int num){
+    int count=0;
+    while(num!=0){
+        count++;
+        num=num/10;
+    }
+    return count;
+}
+int armstrong(int num,int len){
+    int arm=0,n;
+    while(num!=0){
+        n=num%10;
+        arm=arm+pow(n,len);
+        num=num/10;
+    }
+    return arm;
+}
+int main(){
+    int num=1634,len,arm_no;
+    len=length(num);
+    arm_no=armstrong(num,len);
+    if(num==arm_no){
+        printf("%d is a armstrong no",num);
+    }
+    else{
+        printf("%d is not a armstrong no",num);
+        
+    }
+    
+    
+    
+}
