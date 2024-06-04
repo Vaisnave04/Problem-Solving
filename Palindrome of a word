@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<string.h>
+void lowerc(char str[]){
+    int i=0;
+    while(str[i]>64 && str[i]<91){
+        str[i]+=32;
+    }
+    i++;
+}
+void palind(char str[]){
+    int left=0;
+    int right=strlen(str)-1;
+    while(right>left){
+        if(str[left++]!=str[right--]){
+            printf("The word %s is not a palindrom",str);
+            return;
+        }
+    }
+    printf("The word %s is a palindrom",str);
+}
+int main(){
+    char s[10]="heh";
+    lowerc(s);
+    palind(s);
+    return 0;
+}
