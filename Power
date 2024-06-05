@@ -1,0 +1,24 @@
+/*Power using inbuilt function*/
+#include<stdio.h>
+#include<math.h>
+int main(){
+    int a=3,b=2;
+    int val;
+    val=pow(a,b);
+    printf("%d",val);
+}
+/*Without using inbuilt function*/
+#include<stdio.h>
+#include<math.h>
+int main(){
+    int a=3,b=2;
+    int val=1;
+    while(b!=0){
+        val*=a;
+        b--;
+    }
+    
+    
+    
+    printf("%d",val);
+}
