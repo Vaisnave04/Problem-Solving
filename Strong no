@@ -1,0 +1,29 @@
+#include<stdio.h>
+int fac(int num){
+    int fact=1;
+    for(int i=1;i<=num;i++){
+        fact*=i;
+    }
+    return fact;
+}
+int check_sn(int num){
+    int no,sum_f;
+    while(num!=0){
+        no=num%10;
+        num=num/10;
+        sum_f+=fac(no);
+    }
+    return sum_f;
+    
+}
+int main(){
+    int num=145,res;
+    
+    res=check_sn(num);
+    if(res==num){
+        printf("%d is a strong no",num);
+    }
+    else{
+        printf("%d is not a strong no",num);
+    }
+}
