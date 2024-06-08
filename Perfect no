@@ -1,0 +1,25 @@
+#include<stdio.h>
+int perfect_no(int num){
+    int sum=0;
+    for(int i=1;i<=num/2;i++){
+        if(num%i==0){
+            sum+=i;
+            
+        }
+    }
+    return sum;
+    
+}
+int main(){
+    int num=10,sum;
+    sum=perfect_no(num);
+    if(sum==num){
+        printf("%d is a perfect no",num);
+    }
+    else{
+        printf("%d is not a perfect no",num);
+        
+    }
+    
+    
+}
